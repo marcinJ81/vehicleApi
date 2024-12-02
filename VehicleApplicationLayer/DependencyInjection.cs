@@ -1,4 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
+using Infrastructure.Entity.Context;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -23,7 +25,9 @@ namespace VehicleApplicationLayer
                  v.ImplicitlyValidateRootCollectionElements = true;
                  v.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
              });
-
+            services.AddDbContext<VehicleDbContext>(
+               options => options.UseSqlServer(configuration.GetConnectionString("MsSqlDB"))
+           );
             //register db contesxt
             //Register other services and interfaces
             return services;
