@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Command\" />
     <Folder Include="Entity\Context\" />
-    <Folder Include="Entity\Model\" />
     <Folder Include="Query\" />
   </ItemGroup>
 
