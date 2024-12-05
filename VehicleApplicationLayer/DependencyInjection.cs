@@ -1,4 +1,5 @@
 ﻿using FluentValidation.AspNetCore;
+using Infrastructure.Command;
 using Infrastructure.Entity.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,6 +31,7 @@ namespace VehicleApplicationLayer
            );
             //register db contesxt
             //Register other services and interfaces
+            services.AddScoped<IVehicleCommand, VehicleCommand>();
             return services;
         }
     }
