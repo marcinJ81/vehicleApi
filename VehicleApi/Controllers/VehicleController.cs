@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using VehicleApplicationLayer.DTO;
 
 namespace VehicleApi.Controllers
 {
@@ -8,15 +10,24 @@ namespace VehicleApi.Controllers
     public class VehicleController : ControllerBase
     {
         private readonly ILogger<VehicleController> _logger;
-        public VehicleController(ILogger<VehicleController> logger)
+        private readonly IMediator _mediator;
+        public VehicleController(
+            ILogger<VehicleController> logger,
+             IMediator mediator)
         {
             _logger = logger;
+            _mediator = mediator;
         }
 
-        [HttpGet(Name = "GetVehicles")]
-        [ProducesResponseType(typeof(IEnumerable<string>), 200)]
-        public async Task<ActionResult<IEnumerable<string>>> GetForklifts()
+        [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [Route("add-vehicle")]
+        public async Task<ActionResult> AddVehicle([FromBody] VehicleDTO model)
         {
+            await _mediator.Send(model);
+
+            //return viewModel
             return Ok();
         }
     }
