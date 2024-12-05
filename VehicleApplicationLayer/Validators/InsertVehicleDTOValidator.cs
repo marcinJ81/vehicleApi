@@ -49,7 +49,7 @@ namespace VehicleApplicationLayer.Validators
 
         bool CheckIfTypeExist(int typeId)
         {
-            return _dbContext.Vehicles.Any(x => x.VehicleType_id == typeId);
+            return _dbContext.VehicleTypes.Any(x => x.VehicleType_Id == typeId);
         }
     }
 }

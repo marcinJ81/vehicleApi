@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VehicleApplicationLayer.DTO;
+using VehicleApplicationLayer.RequestDto;
 
 namespace VehicleApi.Controllers
 {
@@ -23,7 +24,7 @@ namespace VehicleApi.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [Route("add-vehicle")]
-        public async Task<ActionResult> AddVehicle([FromBody] VehicleDTO model)
+        public async Task<ActionResult> AddVehicle([FromBody] InsertVehicle model)
         {
             await _mediator.Send(model);
 
