@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VehicleApplicationLayer.DTO;
 using VehicleApplicationLayer.RequestDto;
+using VehicleApplicationLayer.VM;
 
 namespace VehicleApi.Controllers
 {
@@ -30,6 +31,17 @@ namespace VehicleApi.Controllers
 
             //return viewModel
             return Ok();
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(List<VehicleVm>), 200)]
+        [Route("get-vehicles")]
+        public async Task<ActionResult> GetVehicles()
+        {
+            var response = await _mediator.Send(new GetVehicles());
+
+            //return viewModel
+            return Ok(response);
         }
     }
 }
