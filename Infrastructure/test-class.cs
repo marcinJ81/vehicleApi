@@ -11,4 +11,10 @@ namespace Infrastructure
         public int MyProperty { get; set; }
         public int MyProperty2 { get; set;}
     }
+
+    public class Test_class2
+    {
+        public int MyProperty { get; set; } 
+        public int MyProperty2 { get; set;}
+    }
 }
