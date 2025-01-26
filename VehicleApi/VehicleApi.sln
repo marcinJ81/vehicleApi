@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitConsumer2", "..\RabbitConsumer2\RabbitConsumer2.csproj", "{4C667E98-8FB9-4400-B07A-9637FF469987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitProducer", "..\RabbitProducer\RabbitProducer.csproj", "{18A94D22-3A02-4D91-85FE-AA6F9D1E3A29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{C3048A82-F201-44DA-BB68-086064F5D2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3048A82-F201-44DA-BB68-086064F5D2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3048A82-F201-44DA-BB68-086064F5D2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C667E98-8FB9-4400-B07A-9637FF469987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C667E98-8FB9-4400-B07A-9637FF469987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C667E98-8FB9-4400-B07A-9637FF469987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C667E98-8FB9-4400-B07A-9637FF469987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A94D22-3A02-4D91-85FE-AA6F9D1E3A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A94D22-3A02-4D91-85FE-AA6F9D1E3A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A94D22-3A02-4D91-85FE-AA6F9D1E3A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A94D22-3A02-4D91-85FE-AA6F9D1E3A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
